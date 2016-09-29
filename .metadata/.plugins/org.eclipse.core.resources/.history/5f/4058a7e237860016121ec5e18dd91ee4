@@ -1,0 +1,31 @@
+package com.jpmc.system;
+
+import com.jpmc.entity.PNRDetails;
+
+public class RailwayReservationSystem {
+	
+	//List<PNRDetails> pnrList;
+
+	public PNRDetails getPNRDetails(long pnrNo) {
+		
+		// TODO Auto-generated method stub
+		PNRDetails pnrDetails=new PNRDetails();
+		pnrDetails.setPnrNo(pnrNo);
+		pnrDetails.setPassengerName("siddharth");
+		pnrDetails.setStatus("waiting");
+		
+		List<Train> a=new ArrayList();
+		Train first =new Train();
+		
+		first.setSource("rajdhani express");
+		first.setSource("bangalore");
+		first.setDestination("mumbai");
+		
+		return pnrDetails;
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,28 @@
+package com.jpmc.system;
+
+import java.util.List;
+
+import com.jpmc.entity.PNRDetails;
+
+public class RailwayReservationSystem {
+	
+	List<PNRDetails> pnrList;
+
+	public PNRDetails getPNRDetails(long pnrNo) {
+		
+		// TODO Auto-generated method stub
+		PNRDetails pnrDetails=new PNRDetails();
+		pnrDetails.setPnrNo(pnrNo);
+		pnrDetails.setPassengerName("siddharth");
+		pnrDetails.setStatus("waiting");
+		return pnrDetails;
+		
+	}
+	
+	public List<Train> getTrain(){
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,7 @@
+package com.jpmc.system;
+
+public class Train {
+	private String source;
+	private String destination;
+	private int trainNo;
+}

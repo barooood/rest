@@ -2,7 +2,7 @@ package com.jpmc.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-//@XmlRootElement
+@XmlRootElement
 public class PNRDetails {
 	private long pnrNo;
 	private String passengerNo;
