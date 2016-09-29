@@ -5,7 +5,31 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-09-27T19:08:07Z</updated>
+  <updated>2016-09-29T08:43:19Z</updated>
+  <entry>
+    <title>Spring Statemachine 1.2.0.M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/29/spring-statemachine-1-2-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2016-09-29:2641</id>
+    <updated>2016-09-29T08:43:19Z</updated>
+    <content type="html">&lt;p&gt;We’re pleased to announce a first milestone release of &lt;a href="http://projects.spring.io/spring-statemachine"&gt;Spring Statemachine 1.2.0.M1&lt;/a&gt;. Artifacts are available from &lt;a href="http://repo.spring.io/libs-milestone/org/springframework/statemachine/"&gt;Spring Repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What we got into this first milestone:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Usual bug fixes and small enhancements&lt;/li&gt;
+  &lt;li&gt;Support for UML submachines&lt;/li&gt;
+  &lt;li&gt;New Repository abstraction keeping machine configuration in an external repository&lt;/li&gt;
+  &lt;li&gt;New support for state actions.&lt;/li&gt;
+  &lt;li&gt;New transition error action concepts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There has been a support for complex state hierarchy from a day one but trouble was that everything had to be defined in a same state configuration. New submachine support adds a feature where a state can be associated with other machine which allows some level of re-use and makes configuration more clean.&lt;/p&gt;
+&lt;p&gt;States can now have their own actions which are executed while being on a state. Execution happens after entry actions and before exit actions and can be cancelled if state exit happens before action completes.&lt;/p&gt;
+&lt;p&gt;Common topic among enhacement requests has been to add ways to keep machine state configuration externally from a static configuration defined either via JavaConfig or imported UML sources. Base support for this has been out there starting from 1.1.0 release but its use has been relatively awkward. For this we added a new abstraction via Spring Data Repositories and first implementation supports JPA and there is a &lt;a href="http://docs.spring.io/spring-statemachine/docs/1.2.0.M1/reference/htmlsingle/#statemachine-examples-datajpa"&gt;JPA sample&lt;/a&gt; using embedded H2 database. Work we got into this first milestone is very basic(i.e. substates are not supported) but plan is to make it fully compatible with rest of a framework and add more OOB repository implementations(i.e. mongo/redis) in coming milestone releases.&lt;/p&gt;
+&lt;p&gt;Full changes as usual are available from &lt;a href="https://github.com/spring-projects/spring-statemachine/blob/master/docs/src/info/changelog.txt"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thank you for all who have contributed in any way either via Stack Overflow, GitHub Issues or other channels. Driving force for changes really has been a community and requests from it.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - September 27, 2016</title>
     <link rel="alternate" href="https://spring.io/blog/2016/09/27/this-week-in-spring-september-27-2016" />
@@ -924,18 +948,5 @@ Looking forward for more!&lt;/p&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 4.3.3 and 4.2.8 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/09/19/spring-framework-4-3-3-and-4-2-8-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2016-09-19:2623</id>
-    <updated>2016-09-19T16:19:49Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I am happy to announce that the Spring Framework &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=15697"&gt;4.3.3&lt;/a&gt; and &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=15596"&gt;4.2.8&lt;/a&gt; maintenance releases &lt;a href="http://projects.spring.io/spring-framework"&gt;are available now&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This third maintenance release of the 4.3 line contains over 60 fixes and improvements and is the base for the upcoming Spring Boot 1.4.1 release later this week. We&amp;rsquo;ll also release another Spring Framework 5.0 milestone Wednesday so stay tuned for more release announcements!&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/SPR"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

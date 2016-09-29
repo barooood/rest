@@ -1,0 +1,6 @@
+package com.jpmc.resource;
+
+@Path("/pnr")
+public class PNRResource {
+	
+}

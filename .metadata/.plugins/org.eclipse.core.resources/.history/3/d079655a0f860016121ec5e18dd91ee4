@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="JAX-RS-Proj">
+        <property name="context-root" value="JAX-RS-Proj"/>
+        <property name="java-output-path" value="/JAX-RS-Proj/build/classes"/>
+    </wb-module>
+</project-modules>

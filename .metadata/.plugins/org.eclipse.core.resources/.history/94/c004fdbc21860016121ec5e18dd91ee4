@@ -1,0 +1,12 @@
+package com.jpmc.system;
+
+import com.jpmc.entity.PNRDetails;
+
+public class RailwayReservationSystem {
+
+	public PNRDetails getPNRDetails(long pnrNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

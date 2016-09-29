@@ -1,0 +1,5 @@
+package com.jpmc.entity.copy;
+
+public class PNRDetails {
+
+}

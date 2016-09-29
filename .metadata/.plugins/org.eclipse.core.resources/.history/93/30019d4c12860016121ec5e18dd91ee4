@@ -1,0 +1,8 @@
+package com.jpmc.resource;
+
+import javax.ws.rs.Path;
+
+@Path("/hello")
+public class HelloWorldResource {
+
+}

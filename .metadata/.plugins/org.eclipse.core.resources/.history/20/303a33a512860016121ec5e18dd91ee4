@@ -1,0 +1,12 @@
+package com.jpmc.resource;
+
+import javax.ws.rs.Path;
+
+//Resource in REST Webservice
+@Path("/hello")
+public class HelloWorldResource {
+	
+	public String sayHello(){
+		return "Hello from REST services";
+	}
+}

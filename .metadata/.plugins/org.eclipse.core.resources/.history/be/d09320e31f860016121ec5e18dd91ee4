@@ -1,0 +1,7 @@
+package com.jpmc.entity;
+
+public class PNRDetails {
+	private long pnrNo;
+	private String passengerNo;
+	private String status;
+}

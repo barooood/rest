@@ -1,0 +1,14 @@
+package com.jpmc.resource;
+
+import javax.ws.rs.Path;
+
+import com.jpmc.entity.PNRDetails;
+
+@Path("/pnr")
+public class PNRResource {
+	
+	public PNRDetails getPNRDetails(long pnrNo){
+		
+	}
+	
+}
