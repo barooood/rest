@@ -1,0 +1,37 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class LN {
+	int amount;
+
+	public int getAmount(int id) {
+		
+		Connection conn = null;
+		PreparedStatement pst = null;
+		ResultSet rs = null;
+		try {
+			conn = dataSource.getConnection();
+			String sql = "select amount from london where id="+Integer.toString(id);
+			pst = conn.prepareStatement(sql);
+			String amount = pst.toString();
+			//List<Flight> rows = new ArrayList<Flight>();
+			
+		}
+		catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		finally {
+			try { rs.close(); pst.close(); conn.close(); } catch(Exception e) { }
+		}
+		
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+}

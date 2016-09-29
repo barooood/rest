@@ -1,0 +1,25 @@
+package com.jpmc.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jpmc.demo.HelloWorld;
+
+
+
+public class TestHelloWorld implements HelloWorldInterface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
+		HelloWorld a=(HelloWorld) container.getBean("hw");
+		System.out.print(a.sayHello("siddharth "));
+	}
+
+	@Override
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

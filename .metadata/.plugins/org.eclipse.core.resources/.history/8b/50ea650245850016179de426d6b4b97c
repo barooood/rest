@@ -1,0 +1,36 @@
+package com.jpmc.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.jpmc.entity.Order;
+
+//@Component("shoppingServ")
+@Service("shoppingServ")
+public class ShoppingServiceImpl implements ShoppingService{
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	@Transactional
+	public void placeOrder(Order order) {
+		// TODO Auto-generated method stub
+		jdbcTemplate.update("insert into tbl_orders values(?,?)",order.getId(),carParts.getPartName(),carParts.getQuantity());
+	}
+
+	@Override
+	public void cancelOrder(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Order fetchOrder(int orderId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

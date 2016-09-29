@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="ds_london"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.hsqldb.jdbc.JDBCDriver" />
+		<property name="url" value="jdbc:hsqldb:file:../Lab 00 - Database/trainingdb;shutdown=true" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+	
+	<bean id="london_bean" class="DAO.LN">
+		
+		<property name="dataSource" ref="ds_london"></property>
+	</bean>
+	
+	
+	<bean id="newyork_bean" class="DAO.NY">
+		<!--  TODO 1: Refer slide no. 21 to inject the DataSource -->
+		<property name="dataSource" ref="ds_new_york"></property>
+	</bean>
+	
+	<bean id="tokyo_bean" class="DAO.TK">
+		<!--  TODO 1: Refer slide no. 21 to inject the DataSource -->
+		<property name="dataSource" ref="ds"></property>
+	</bean>
+	
+	
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/new_york.sql" />
+	</jdbc:initialize-database>
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/tokyo.sql" />
+	</jdbc:initialize-database>
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/london.sql" />
+	</jdbc:initialize-database>
+	
+	</beans>

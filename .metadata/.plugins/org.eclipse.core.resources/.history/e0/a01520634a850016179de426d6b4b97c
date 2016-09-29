@@ -1,0 +1,17 @@
+package com.jpmc.test;
+
+import com.jpmc.entity.LineItem;
+import com.jpmc.entity.Order;
+
+public class StartTransaction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Order order=new Order();
+		LineItem lineItem=new LineItem();
+		
+		
+		
+	}
+
+}

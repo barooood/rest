@@ -1,0 +1,9 @@
+create table new_york(id int, amount int)
+
+insert into new_york values(1111,100);
+insert into new_york values(1112,200);
+insert into flights_test values('AI-229','INDIAN', 'KOLKATA', 'DELHI');
+insert into flights_test values('SP-109','SPICEJET', 'CHENNAI', 'MUMBAI');
+insert into flights_test values('GO-120','GO AIR', 'MUMBAI', 'BANGALORE');
+insert into flights_test values('GO-121','GO AIR', 'MUMBAI', 'GOA');
+

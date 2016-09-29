@@ -1,0 +1,6 @@
+create table tokyo(id int, amount int)
+
+insert into tokyo values(1111,100);
+insert into tokyo values(1112,200);
+
+

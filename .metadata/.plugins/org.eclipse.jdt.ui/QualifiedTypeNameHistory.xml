@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.inject.Qualifier"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="Controller.Repo"/>
+<fullyQualifiedTypeName name="com.jpmc.demo.HelloWorld"/>
+<fullyQualifiedTypeName name="com.jpmc.demo.Calculator"/>
+<fullyQualifiedTypeName name="com.jpmc.test.HelloWorldInterface"/>
+<fullyQualifiedTypeName name="com.jpmc.demo2.SpellChecker"/>
+<fullyQualifiedTypeName name="com.jpmc.demo2.TextEditor"/>
+<fullyQualifiedTypeName name="com.jpmc.bank.Bank"/>
+<fullyQualifiedTypeName name="com.jpmc.bank.Atm"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="org.hsqldb.jdbcDriver"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+<fullyQualifiedTypeName name="com.jpmc.dao.CarPartsInventory"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="CarPartsMapper"/>
+<fullyQualifiedTypeName name="com.jpmc.entity.CarParts"/>
+<fullyQualifiedTypeName name="com.jpmc.entity.Order"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.jpmc.entity.LineItem"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.jpmc.entity.Payment"/>
+<fullyQualifiedTypeName name="com.jpmc.service.ShoppingService"/>
+</qualifiedTypeNameHistroy>

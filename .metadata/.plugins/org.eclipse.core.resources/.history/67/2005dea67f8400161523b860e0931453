@@ -1,0 +1,16 @@
+package com.jpmc.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jpmc.demo2.TextEditor;
+
+public class TestSpellChecker {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
+		TextEditor a=(TextEditor)container.getBean("config.xml");
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.jpmc.entity;
+
+public class CarParts {
+	private int partNo;
+	private String partName;
+	private int quantity;
+}

@@ -1,0 +1,14 @@
+package Controller;
+
+import DAO.LN;
+
+public class Test {
+	int london_id;
+	int new_york_id;
+	int 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

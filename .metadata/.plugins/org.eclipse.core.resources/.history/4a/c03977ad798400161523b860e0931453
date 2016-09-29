@@ -1,0 +1,19 @@
+package com.jpmc.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+
+public class TestHelloWorld  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
+		HelloWorldInterface a=(HelloWorldInterface) container.getBean("add");
+		System.out.println(a.add(1, 2));
+	}
+
+	
+
+}

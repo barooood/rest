@@ -1,0 +1,13 @@
+package DAO;
+
+public class LN {
+	int amount;
+
+	public int getAmount(int id) {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+}

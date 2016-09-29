@@ -1,0 +1,24 @@
+package com.jpmc.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jpmc.entity.LineItem;
+import com.jpmc.entity.Order;
+import com.jpmc.service.ShoppingService;
+
+public class StartTransaction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("Config.xml");
+		ShoppingService shoppingService=(ShoppingService)ctx.getBean("shoppingServ");
+		
+		Order order=new Order();
+		LineItem lineItem=new LineItem();
+		
+	}
+
+}

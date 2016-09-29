@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/new_york.sql" />
+	</jdbc:initialize-database>
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/tokyo.sql" />
+	</jdbc:initialize-database>
+	
+	<jdbc:initialize-database data-source="ds" ignore-failures="ALL">
+		<jdbc:script location="file:src/main/resources/tokyo.sql" />
+	</jdbc:initialize-database>
+	
+	</beans>

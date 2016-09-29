@@ -1,0 +1,10 @@
+package com.jpmc.test;
+
+public class TestAtm {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package Test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jpmc.dao.CarPartsInventory;
+import com.jpmc.entity.CarParts;
+
+public class TestCarParts {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+		CarPartsInventory carPartsInventory=(CarPartsInventory)ctx.getBean("carPartsInv");
+		
+//		CarParts part=new CarParts();
+//		part.setPartNo(123);
+//		part.setPartName("Mirror");
+//		part.setQuantity(25);
+//		
+//		carPartsInventory.addNewParts(part);
+		
+		CarParts part=carPartsInventory.loadCarParts(123);
+		System.out.println(part.getPartNo()+","+part.getPartName()+","+part.getQuantity());
+		
+	}
+
+}

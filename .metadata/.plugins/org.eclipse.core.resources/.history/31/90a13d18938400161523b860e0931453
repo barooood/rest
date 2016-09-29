@@ -1,0 +1,18 @@
+package com.jpmc.demo2;
+
+import javax.annotation.Resource;
+
+public class TextEditor {
+	
+	private SpellChecker spellChecker;
+	
+	public void load(String document){
+		System.out.println("loading the given document completed "+document);
+		spellChecker.checkSpelling(document);
+	}
+	@Resource(name="sp")
+	public void setSpellChecker(SpellChecker spellChecker) {
+		this.spellChecker = spellChecker;
+	}
+	
+}

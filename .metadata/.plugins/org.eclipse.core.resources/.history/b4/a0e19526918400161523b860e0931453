@@ -1,0 +1,23 @@
+package com.jpmc.bank;
+
+import javax.annotation.Resource;
+
+public class Atm {
+	
+	private Bank bank;
+
+	@Resource(name="bank")
+	public void setBank(Bank bank) {
+		this.bank = bank;
+	}
+	
+	
+	public void printReceipt(int amount){
+		try{
+			bank.amountDeposit(amount);
+		}
+		
+		System.out.println( amount + "deposited successfully");
+	}
+	
+}

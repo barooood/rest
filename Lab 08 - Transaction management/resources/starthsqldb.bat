@@ -1,0 +1,1 @@
+java -cp "C:\spring\Lab 00 - Libraries\common-dependencies\hsqldb.jar" org.hsqldb.server.Server --database.0 file:springdb --dbname.0 springdb

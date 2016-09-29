@@ -1,0 +1,5 @@
+package com.jpmc.test;
+
+public interface HelloWorldInterface {
+
+}

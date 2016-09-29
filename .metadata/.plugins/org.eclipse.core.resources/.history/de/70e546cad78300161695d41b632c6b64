@@ -1,0 +1,16 @@
+package Controller;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+	int london_id;
+	int new_york_id;
+	int tokyo_id;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext container = new ClassPathXmlApplicationContext("config.xml");
+		Repo flightRepo = (FlightRepository) container.getBean("flightRepo");
+	}
+
+}

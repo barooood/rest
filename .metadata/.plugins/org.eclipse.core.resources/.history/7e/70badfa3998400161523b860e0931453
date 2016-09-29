@@ -1,0 +1,17 @@
+package Test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jpmc.dao.CarPartsInventory;
+
+public class TestCarParts {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+		CarPartsInventory carPartsInventory=(CarPartsInventory)ctx.getBean("carParts");
+		
+	}
+
+}

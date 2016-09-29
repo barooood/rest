@@ -1,0 +1,26 @@
+package ShoppingService;
+
+import com.jpmc.entity.Order;
+import com.jpmc.service.ShoppingService;
+
+public class ShoppingServiceImpl implements ShoppingService{
+
+	@Override
+	public void placeOrder(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancelOrder(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Order fetchOrder(int orderId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

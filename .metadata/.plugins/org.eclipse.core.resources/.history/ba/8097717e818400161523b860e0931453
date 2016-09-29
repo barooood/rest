@@ -1,0 +1,5 @@
+package com.jpmc.bank;
+
+public class Atm {
+
+}

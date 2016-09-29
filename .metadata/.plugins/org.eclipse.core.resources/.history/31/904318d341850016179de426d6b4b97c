@@ -1,0 +1,6 @@
+package com.jpmc.service;
+
+public interface ShoppingService {
+	public void placeOrder(Order order);
+	public void cancelOrder(Order order);
+}

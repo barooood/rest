@@ -1,0 +1,12 @@
+package com.jpmc.demo;
+
+import com.jpmc.test.HelloWorldInterface;
+
+public class Calculator implements HelloWorldInterface, CalculatorInterface{
+	/* (non-Javadoc)
+	 * @see com.jpmc.demo.CalculatorInterface#add(int, int)
+	 */
+	public int add(int a,int b){
+		return a+b;
+	}
+}

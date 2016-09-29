@@ -1,0 +1,12 @@
+package com.jpmc.demo2;
+
+public class TextEditor {
+	
+	private SpellChecker spell;
+	
+	public void load(String document){
+		System.out.println("loading the given document completed "+document);
+		spell.checkSpelling(document);
+	}
+	
+}

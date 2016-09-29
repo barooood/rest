@@ -1,0 +1,17 @@
+package Controller;
+
+import common.FlightRepository;
+import test.ApplicationContext;
+import test.ClassPathXmlApplicationContext;
+
+public class Test {
+	int london_id;
+	int new_york_id;
+	int tokyo_id;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext container = new ClassPathXmlApplicationContext("xml-config-2.xml");
+		FlightRepository flightRepo = (FlightRepository) container.getBean("flightRepo");
+	}
+
+}

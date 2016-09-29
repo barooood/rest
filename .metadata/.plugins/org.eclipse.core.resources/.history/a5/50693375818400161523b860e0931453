@@ -1,0 +1,7 @@
+package com.jpmc.bank;
+
+public class Bank {
+	public void amountDeposit(int amount){
+		
+	}
+}

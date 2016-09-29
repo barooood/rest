@@ -1,0 +1,59 @@
+package com.jpmc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+
+import com.jpmc.entity.CarParts;
+@Component("carPartsInv")
+public class CarPartsInventoryImpl implements CarPartsInventory{
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public void addNewParts(CarParts carParts) {
+		// TODO Auto-generated method stub
+		jdbcTemplate.update("insert into tbl_carparts values(?,?,?)",carParts.getPartNo(),carParts.getPartName(),carParts.getQuantity());
+	}
+		
+	
+
+	@Override
+	public CarParts loadCarParts(int partNo) {
+		// TODO Auto-generated method stub
+		class CarPartsMapper implements RowMapper<CarParts>{
+			public CarParts mapRow(ResultSet rs,int index) throws SQLException{
+				CarParts part=new CarParts();
+				part.setPartNo(rs.getInt("partNo"));
+				part.setPartName(rs.getString("partName"));
+				part.setQuantity(rs.getInt("quantity"));
+				return part;
+			}
+		}
+		CarParts part=jdbcTemplate.queryForObject("select * from tbl_carparts where partNo=?", new CarPartsMapper(),partNo);
+		return part;
+	}
+
+	@Override
+	public List<CarParts> loadAllAvailableCarParts() {
+		// TODO Auto-generated method stub
+		class CarPartsMapper implements RowMapper<CarParts>{
+			public CarParts mapRow(ResultSet rs,int index) throws SQLException{
+				CarParts part=new CarParts();
+				part.setPartNo(rs.getInt("partNo"));
+				part.setPartName(rs.getString("partName"));
+				part.setQuantity(rs.getInt("quantity"));
+				return part;
+			}
+		}
+		CarParts part=jdbcTemplate.queryForObject("select * from tbl_carparts where partNo=?", new CarPartsMapper(),partNo);
+		return part;
+	}
+	
+}

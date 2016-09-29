@@ -1,0 +1,10 @@
+package com.jpmc.demo;
+
+public class Calculator implements CalculatorInterface{
+	/* (non-Javadoc)
+	 * @see com.jpmc.demo.CalculatorInterface#add(int, int)
+	 */
+	public int add(int a,int b){
+		return a+b;
+	}
+}

@@ -1,0 +1,8 @@
+package com.jpmc.dao;
+
+public interface CarPartsInventory {
+	public void addNewParts(CarParts carParts);
+	public CarParts loadCarParts(int partNo);
+	public list<CarParts> loadAllAvailableCarParts();
+	
+}
