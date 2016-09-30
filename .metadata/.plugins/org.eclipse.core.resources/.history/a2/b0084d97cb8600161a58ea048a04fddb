@@ -1,0 +1,5 @@
+package com.jpmc.resource;
+@Path("learning")
+public class LearningRestApi {
+	
+}
