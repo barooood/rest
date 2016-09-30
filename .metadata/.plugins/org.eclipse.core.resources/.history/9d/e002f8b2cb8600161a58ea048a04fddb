@@ -1,0 +1,11 @@
+package com.jpmc.resource;
+
+import javax.ws.rs.Path;
+
+@Path("learning")
+public class LearningRestApi {
+	
+	@Path("/ex01")
+	@GET
+	
+}

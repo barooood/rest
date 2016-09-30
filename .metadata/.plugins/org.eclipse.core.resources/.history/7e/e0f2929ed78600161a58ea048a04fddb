@@ -1,0 +1,81 @@
+package com.jpmc.resource;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.MatrixParam;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+@Path("/learning")
+public class LearningRestApi {
+	
+	
+	
+	//run as http://localhost:8080/JAX-RS-Proj/rest/learning/ex01?empno=1001&name=siddharth&salary=1000
+	//http://localhost:8080/JAX-RS-Proj/rest/learning/ex02;empno=1001;name=siddharth;salary=1000
+	//http://localhost:8080/JAX-RS-Proj/rest/learning/ex03/1001/siddharth/1000
+	//http://localhost:8080/JAX-RS-Proj/rest/learning/ex04/1001/siddharth
+	
+	
+	//three different methods of data passing from the url to the server
+	
+	
+	@Path("/ex01/{empno}/{name}/{salary}")
+	@GET
+	@Produces("text/plain")
+	public String example01(
+			@QueryParam("empno") int empno,
+			@QueryParam("name") String name,
+			@QueryParam("salary") double salary ){
+		return "response from this example01";
+	}
+	
+	@Path("/ex02")
+	@GET
+	@Produces("text/plain")
+	public String example02(
+			@MatrixParam("empno") int empno,
+			@MatrixParam("name") String name,
+			@MatrixParam("salary") double salary ){
+		return "response from this example02";
+		
+	}
+	
+	@Path("/ex03")
+	@GET
+	@Produces("text/plain")
+	public String example03(
+			@PathParam("empno") int empno,
+			@PathParam("name") String name,
+			@PathParam("salary") double salary ){
+		return "response from this example03";
+		
+	}
+	
+	@Path("/ex04/{empno : \\d+}/{name : [a-zA-Z]*}")
+	@GET
+	@Produces("text/plain")
+	public String example04(
+			@PathParam("empno") int empno,
+			@PathParam("name") String name
+			){
+		return "response from this example04";
+		
+	}
+	
+	@Path("/ex05/{empno : \\d+}/{name : [a-zA-Z]*}")
+	@GET
+	@Produces("text/plain")
+	public String example05(
+			@PathParam("empnos") int empnos,
+			@PathParam("action") String action
+			){
+		System.out.println(empnos);
+		System.out.println(action);
+		return "response from this example04";
+		
+	}
+	
+	
+}
