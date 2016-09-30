@@ -1,0 +1,36 @@
+package com.jpmc.controller;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+import org.springframework.web.bind.annotation.*;
+
+import com.jpmc.system.RailwayReservationSystem;
+import com.jpmc.system.Train;
+
+@RestController
+public class HelloController {
+	
+	//http://localhost:8080/hello?name=siddharth
+	
+	
+	@RequestMapping(value = "/hello" , method=RequestMethod.GET , produces="text/plain")
+	public String sayHello(@RequestParam("name") String name){
+		return "Hello " + name + " welcome to the spring rest services";
+	}
+	
+	//@GET
+	@RequestMapping(value = "/hello" , method=RequestMethod.GET , produces="text/plain") //we want to send the pnrdetails in the json form
+	public List<Train> getPNRDetails(@QueryParam("pnrNo") long pnrNo){
+		
+		RailwayReservationSystem rs=new RailwayReservationSystem();
+		//PNRDetails pnrDetails=rs.getPNRDetails(pnrNo);
+		List<Train> a=rs.getTrainList();
+		return a;
+		
+	}
+	
+}

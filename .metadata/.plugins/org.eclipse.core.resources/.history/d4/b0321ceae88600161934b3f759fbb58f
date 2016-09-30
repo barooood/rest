@@ -1,0 +1,8 @@
+package com.jpmc.resource;
+
+public class Employee {
+	private int empNo;
+	private String name;
+	private double salary;
+	
+}
